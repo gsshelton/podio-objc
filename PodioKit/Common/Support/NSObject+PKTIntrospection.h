@@ -10,6 +10,10 @@
 
 @interface NSObject (PKTIntrospection)
 
+@property (nonatomic, copy, readonly) NSArray *pkt_codablePropertyNames;
+
++ (NSArray *)pkt_codablePropertyNames;
+
 + (id)pkt_valueByPerformingSelectorWithName:(NSString *)selectorName;
 
 + (id)pkt_valueByPerformingSelectorWithName:(NSString *)selectorName withObject:(id)object;
